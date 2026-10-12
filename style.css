@@ -1,0 +1,181 @@
+/* --- Tipografía Noto Sans y Fondo General --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  
+  /* Carga la imagen de fondo subida a GitHub */
+  background-image: url('fondo.png');
+  background-repeat: repeat;
+  background-position: top center;
+  background-attachment: fixed;
+  background-color: #ffffff;
+}
+
+/* --- Encabezado Sin Franja Vino --- */
+header, .header {
+  background-color: transparent !important;
+  padding: 30px 10px 15px 10px !important;
+  box-shadow: none !important;
+}
+
+.header-container {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Logo de Becas mucho más grande */
+.logo-header, header img {
+  max-height: 130px !important; /* Tamaño protagónico */
+  width: auto;
+  object-fit: contain;
+}
+
+.header-text {
+  text-align: center;
+}
+
+.header h1, header h1 {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: #691C32 !important; /* Guinda institucional */
+  margin: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.header h2, header h2 {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #333333 !important;
+  margin: 6px 0 0 0 !important;
+}
+
+/* --- Contenedor Principal (Tarjeta del Buscador) --- */
+.container, main {
+  max-width: 580px;
+  margin: 20px auto 40px auto;
+  padding: 25px 20px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.instruction {
+  font-size: 14px;
+  font-weight: 600;
+  color: #285C4D;
+  margin-bottom: 18px;
+}
+
+/* --- Buscador e Inputs --- */
+.search-box {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 11px 14px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 65%;
+  border: 2px solid #BC955C;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #691C32;
+}
+
+/* Botón en Color Vino */
+button {
+  padding: 11px 20px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #691C32 !important; /* Color Vino/Guinda */
+  color: #ffffff !important;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #4A1323 !important; /* Vino más oscuro al pasar el cursor */
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* --- Cuadro de Resultados --- */
+.result-box {
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+  }
+
+  .logo-header, header img {
+    max-height: 100px !important; /* Tamaño amplio para pantallas móviles */
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  input, button {
+    width: 100%;
+  }
+}
+/* Estilo para destacar la palabra Puebla en Vino y Negritas */
+.texto-puebla {
+  color: #691C32 !important; /* Color vino/guinda institucional */
+  font-weight: 700 !important; /* Negritas */
+}
+/* --- Contenedor y Estilo de la Animación (Más Arriba) --- */
+.animacion-container {
+  text-align: center;
+  margin: -45px auto 30px auto; /* El primer valor (-15px) sube la imagen */
+  padding: 0 15px;
+}
+
+.imagen-animada {
+  max-width: 180px; /* Mantén el tamaño compacto que elegiste */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .animacion-container {
+    margin: -10px auto 25px auto; /* Ajuste para celular */
+  }
+  
+  .imagen-animada {
+    max-width: 140px;
+  }
+}
